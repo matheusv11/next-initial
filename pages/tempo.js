@@ -11,8 +11,10 @@ function Tempo(props) {
     )
 }
 
-export function getStaticProps() {
+export async function getStaticProps() {
     console.log('Oh o carro estático passando no seu ovo');
+    
+    await delay(5000);
     const staticDate = new Date();
     const staticDateString = staticDate.toGMTString();
 
@@ -22,5 +24,7 @@ export function getStaticProps() {
         }
     }
 }
+
+const delay = ms => new Promise(resolve=> setTimeout(resolve, ms));
 
 export default Tempo;
