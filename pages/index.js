@@ -1,13 +1,16 @@
 import { useState } from 'react';
 import Link from 'next/link';
-
+//Utilizar pre-fetch
 function Home (){
     return (
         <div>
             <h1>Home</h1>
+
             <Link href="/sobre">
                 <a>Acessar página sobre</a>
             </Link>
+            
+            <p/>
 
             <Link href="/tempo">
                 <a>Acessar página de tempo</a>
